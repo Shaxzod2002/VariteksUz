@@ -1,0 +1,199 @@
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+.navbar.active {
+  background-color: #fff;
+}
+
+.nav-link,
+.category {
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition-duration: 0.3s;
+}
+
+.nav-link:hover,
+.category:hover {
+  background-color: #c53631;
+  color: #fff;
+}
+
+.nav-link.active,
+.category.active,
+.subcategory.active {
+  color: #c53631;
+  background-color: transparent;
+}
+
+.subcategory:hover {
+  color: #c53631;
+}
+
+.contact-pages {
+  transform-origin: top;
+  transition-duration: 0.5s;
+}
+
+.contact-pages .contact-page-link.active {
+  color: #c53631;
+}
+
+.contact:hover .contact-pages {
+  transform: scale(1);
+  color: #000;
+}
+
+footer {
+  background: url(../images/Footer/bg.png) no-repeat right;
+  background-size: cover;
+}
+
+footer h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+footer a {
+  color: white;
+}
+
+footer a.download {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 5px;
+  background-color: #c53631;
+  border-radius: 12px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(220, 38, 38, 0.648);
+  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  box-shadow: 0 0 5px 2px rgb(224, 141, 141);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition-duration: 0.5s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgb(220, 38, 38, 1);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.about-bg {
+  width: 100%;
+  height: 350px;
+  background: url(../images/About/bg.png) no-repeat center;
+  background-size: cover;
+}
+
+.blog-bg {
+  width: 100%;
+  height: 350px;
+  background: url(../images/Blog/Blog.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.contact-bg {
+  width: 100%;
+  height: 350px;
+  background: url(../images/Contact/bg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.orthopedic-products-bg {
+  width: 100%;
+  height: 350px;
+  background: url("../images/Our Production/Orthopedic Products/bg.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.anti-varicose-products-bg {
+  width: 100%;
+  height: 350px;
+  background: url("../images/Our Production/Anti Varicose Products/bg.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.liposuction-corsets-bg {
+  width: 100%;
+  height: 350px;
+  background: url("../images/Our Production/Liposuction Corsets/bg.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.anti-varicose-products-order-bg {
+  width: 100%;
+  height: 350px;
+  background: url("../images/Our Production/Anti Varicose Products Made to Order/bg.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.search {
+  width: 100%;
+  height: 650px;
+  background: url("../images/Search Page/bg.png") no-repeat center;
+  background-size: cover;
+}
+
+.product-category {
+  width: 100%;
+  height: 350px;
+  background: url("../images/Our Production/Anti Varicose Products Made to Order/bg.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.pagitation.active {
+  background-color: #c53631;
+  color: #fff;
+  font-size: x-large;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 5px 7px 1.5px gray;
+  }
+
+  .menu-links {
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+  }
+
+  .contact-pages {
+    left: -62.5px !important;
+  }
+}
