@@ -42,7 +42,7 @@ export default function SearchProduct() {
         <h1 className="md:text-5xl text-3xl font-bold">
           {lenguage === "ru" ? "Найденные продукты" : "Topilgan Mahsulotlar"}
         </h1>
-        <div className="w-full flex flex-wrap my-6 lg:justify-start justify-center items-center gap-4">
+        <div className="w-full flex flex-wrap my-6 lg:justify-start justify-center items-center gap-8">
           {loading ? (
             <>
               {curentProduct.map((product) => (
@@ -58,7 +58,7 @@ export default function SearchProduct() {
                     alt={product.image[0].id}
                   />
                   <div className="flex flex-col text-center items-center justify-center">
-                    <h3 className="text-2xl font-semibold">
+                    <h3 className="text-xl font-semibold">
                       {product.product.name}
                     </h3>
                   </div>

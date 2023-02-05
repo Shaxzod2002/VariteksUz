@@ -33,79 +33,86 @@ export default function AboutHome() {
     <>
       {loading ? (
         <>
-          <Swiper
-            loop={true}
-            slidesPerView={1}
-            spaceBetween={10}
-            centeredSlides={true}
-            breakpoints={{
-              400: {
-                slidesPerView: 2,
-                centeredSlides: false,
-              },
-              600: {
-                slidesPerView: 2,
-                centeredSlides: false,
-              },
-            }}
-            modules={[Pagination, Navigation]}
-            navigation={{ clickable: true }}
-            className="md:w-[80%] w-full mx-auto min-h-0 mySwiper"
-          >
-            {home.comment.map((item) => {
-              return (
-                <SwiperSlide
-                  className="w-[240px] max-w-full min-h-[200px] flex flex-col items-center justify-between gap-2"
-                  key={item.id}
-                >
-                  <img
-                    className="w-[50px] h-[50px] object-cover rounded-full"
-                    src={API_URL + item.image}
-                    alt={item.name}
-                  />
-                  <div className="">
-                    <StarGroup stars={item.stars} />
-                  </div>
-                  <p>{item.text.slice(0, 300)}</p>
-                  <h3 className="text-2xl font-bold">{item.name}</h3>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-          <Box className="mt-20 mb-4 md:w-[80%] w-full mx-auto min-h-[100px] flex flex-col justify-center items-center gap-4">
-            <Box className="relative w-full h-[4px] bg-gray-400 flex justify-center items-center">
-              <h1 className="absolute -top-10">
-                {lenguage === "ru" ? "НАШИ ПАРТНЕРЫ" : "BIZNING HAMKORLIK"}
-              </h1>
-              <Box className="w-[30%] h-[4px] bg-blue-500"></Box>
-            </Box>
-            <Box className="flex flex-wrap w-full gap-2">
-              {home["partner-image"].map((item) => {
+          {home.comment.length !== 0 && (
+            <Swiper
+              loop={true}
+              slidesPerView={1}
+              spaceBetween={10}
+              centeredSlides={true}
+              breakpoints={{
+                400: {
+                  slidesPerView: 2,
+                  centeredSlides: false,
+                },
+                600: {
+                  slidesPerView: 2,
+                  centeredSlides: false,
+                },
+              }}
+              modules={[Pagination, Navigation]}
+              navigation={{ clickable: true }}
+              className="md:w-[80%] w-full mx-auto min-h-0 mySwiper"
+            >
+              {home.comment.map((item) => {
                 return (
-                  <Box key={item.id}>
-                    <img src={API_URL + item.image} alt={item.id} />
-                  </Box>
+                  <SwiperSlide
+                    className="w-[240px] max-w-full min-h-[200px] flex flex-col items-center justify-between gap-2"
+                    key={item.id}
+                  >
+                    <img
+                      className="w-[50px] h-[50px] object-cover rounded-full"
+                      src={API_URL + item.image}
+                      alt={item.name}
+                    />
+                    <div className="">
+                      <StarGroup stars={item.stars} />
+                    </div>
+                    <p>{item.text.slice(0, 300)}</p>
+                    <h3 className="text-2xl font-bold">{item.name}</h3>
+                  </SwiperSlide>
                 );
               })}
+            </Swiper>
+          )}
+          {home["partner-image"].length !== 0 && (
+            <Box className="mt-20 mb-4 md:w-[80%] w-full mx-auto min-h-[100px] flex flex-col justify-center items-center gap-4">
+              <Box className="relative w-full h-[4px] bg-gray-400 flex justify-center items-center">
+                <h1 className="absolute -top-10">
+                  {lenguage === "ru" ? "НАШИ ПАРТНЕРЫ" : "BIZNING HAMKORLIK"}
+                </h1>
+                <Box className="w-[30%] h-[4px] bg-blue-500"></Box>
+              </Box>
+              <Box className="flex flex-wrap w-full gap-2">
+                {home["partner-image"].map((item) => {
+                  return (
+                    <Box key={item.id}>
+                      <img src={API_URL + item.image} alt={item.id} />
+                    </Box>
+                  );
+                })}
+              </Box>
             </Box>
-          </Box>
-          <Box className="mt-20 mb-4 md:w-[80%] w-full mx-auto min-h-[100px] flex flex-col justify-center items-center gap-4">
-            <Box className="relative w-full h-[4px] bg-gray-400 flex justify-center items-center">
-              <h1 className="absolute -top-10">
-                {lenguage === "ru" ? "НАМ ДОВЕРЯЮТ" : "BIZGA ISHONCHIDAN"}
-              </h1>
-              <Box className="w-[30%] h-[4px] bg-blue-500"></Box>
+          )}
+
+          {home["support-image"].length !== 0 && (
+            <Box className="mt-20 mb-4 md:w-[80%] w-full mx-auto min-h-[100px] flex flex-col justify-center items-center gap-4">
+              <Box className="relative w-full h-[4px] bg-gray-400 flex justify-center items-center">
+                <h1 className="absolute -top-10">
+                  {lenguage === "ru" ? "НАМ ДОВЕРЯЮТ" : "BIZGA ISHONCHIDAN"}
+                </h1>
+                <Box className="w-[30%] h-[4px] bg-blue-500"></Box>
+              </Box>
+              <Box className="flex flex-wrap w-full gap-2">
+                {home["support-image"].map((item) => {
+                  return (
+                    <Box key={item.id}>
+                      <img src={API_URL + item.image} alt={item.id} />
+                    </Box>
+                  );
+                })}
+              </Box>
             </Box>
-            <Box className="flex flex-wrap w-full gap-2">
-              {home["support-image"].map((item) => {
-                return (
-                  <Box key={item.id}>
-                    <img src={API_URL + item.image} alt={item.id} />
-                  </Box>
-                );
-              })}
-            </Box>
-          </Box>
+          )}
         </>
       ) : (
         <Loading />

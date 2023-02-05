@@ -65,27 +65,37 @@ export default function Certificate() {
         <h1 className="md:text-5xl text-3xl font-bold md:text-left text-center">
           {lenguage === "ru" ? "Cертификаты" : "Sertifikatlar"}
         </h1>
-        <Box className="flex flex-wrap md:justify-start justify-center gap-4">
-          {loading ? (
-            certificate.map((item) => {
-              return (
-                <Box key={item.id}>
-                  <img
-                    className="w-[200px] cursor-pointer"
-                    src={item.image}
-                    alt={item.id}
-                    onClick={() => {
-                      setModul(true);
-                      getCard(item);
-                    }}
-                  />
-                </Box>
-              );
-            })
-          ) : (
-            <Loading />
-          )}
-        </Box>
+        {certificate.length !== 0 ? (
+          <Box className="flex flex-wrap md:justify-start justify-center gap-4">
+            {loading ? (
+              certificate.map((item) => {
+                return (
+                  <Box key={item.id}>
+                    <img
+                      className="w-[200px] cursor-pointer"
+                      src={item.image}
+                      alt={item.id}
+                      onClick={() => {
+                        setModul(true);
+                        getCard(item);
+                      }}
+                    />
+                  </Box>
+                );
+              })
+            ) : (
+              <Loading />
+            )}
+          </Box>
+        ) : (
+          <Box className="w-full flex justify-center">
+            <h1 className="text-[#c53631]">
+              {lenguage === "ru"
+                ? "Сертификаты не найдены"
+                : "Sertifikatlar topilmadi"}
+            </h1>
+          </Box>
+        )}
       </Box>
     </>
   );

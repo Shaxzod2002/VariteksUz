@@ -32,7 +32,6 @@ export default function Footer() {
               <h3 className="text-white font-semibold">
                 {lenguage === "ru" ? "Контакты" : "Kontaktlar"}
               </h3>
-              <h4>{lenguage === "ru" ? "Офис" : "Idora"}</h4>
               {parse(item.address)}
               <Box className="py-3">
                 <h3>

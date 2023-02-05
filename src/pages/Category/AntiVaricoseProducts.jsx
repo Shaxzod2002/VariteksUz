@@ -62,7 +62,7 @@ const AntiVaricoseProducts = () => {
                   key={item.id}
                   to={`/product/${item.id}/1`}
                   onClick={windowScrollTo}
-                  className="flex flex-col items-center justify-start gap-3 w-[200px] rounded-xl min-h-[300px]"
+                  className="flex flex-col items-center justify-start gap-3 w-[200px] rounded-xl min-h-[400px]"
                 >
                   <img
                     src={item.image}

@@ -60,7 +60,7 @@ const LiposuctionCorsets = () => {
                   key={item.id}
                   to={`/product/${item.id}`}
                   onClick={windowScrollTo}
-                  className="flex flex-col items-center justify-between gap-3 w-[200px] rounded-xl min-h-[300px]"
+                  className="flex flex-col items-center justify-start gap-3 w-[200px] rounded-xl min-h-[320px]"
                 >
                   <img
                     src={item.image}

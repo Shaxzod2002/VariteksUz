@@ -12,7 +12,8 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper";
 import Socialmedia from "../../components/SocialMedia";
-
+import { Box } from "@mui/system";
+const API_URL = "https://azamjon.pythonanywhere.com/";
 export default function Product() {
   const [productItem, setProductItem] = useState({});
   const [loading, setLoading] = useState(false);
@@ -67,7 +68,7 @@ export default function Product() {
                   })}
                 </Swiper>
               </div>
-              <div className="w-[400px] max-w-[90%] h-[450px] flex flex-col justify-between">
+              <div className="w-[400px] max-w-[90%] md:min-h-[450px] min-h-0 gap-4 flex flex-col justify-between">
                 <h3 className="text-red-500 text-2xl font-semibold">
                   {lenguage === "ru" ? "Показания" : "Ko'rsatkichlar"}
                 </h3>
@@ -80,6 +81,56 @@ export default function Product() {
                 <Socialmedia size={40} />
               </div>
             </div>
+            {productItem["features"].length !== 0 && (
+              <Box className="w-full py-4">
+                <h1 className="md:text-5xl text-3xl text-[#c53631] font-bold">
+                  {lenguage === "ru"
+                    ? "Характеристики изделия"
+                    : "Mahsulot xususiyatlari"}
+                </h1>
+                <Box className="w-full flex flex-wrap gap-4 justify-start pt-8">
+                  {productItem["features"].map((item) => {
+                    return (
+                      <Box
+                        className="flex items-center gap-3 w-[500px]"
+                        key={item.id}
+                      >
+                        <img src={API_URL + item.image} alt={item.id} />
+                        <Box className="flex flex-col justify-center">
+                          <h2 className="font-bold">{item.name}</h2>
+                          <p>{item.text}</p>
+                        </Box>
+                      </Box>
+                    );
+                  })}
+                </Box>
+              </Box>
+            )}
+            {productItem["product-detail"].length !== 0 && (
+              <Box className="w-full py-4">
+                <h1 className="md:text-5xl text-3xl text-[#c53631] font-bold">
+                  {lenguage === "ru"
+                    ? "Информация о продукте"
+                    : "Mahsulot haqida ma'lumot"}
+                </h1>
+                <Box className="w-full flex flex-wrap gap-4 justify-start pt-8">
+                  {productItem["product-detail"].map((item) => {
+                    return (
+                      <Box
+                        className="flex items-center gap-3 w-[500px]"
+                        key={item.id}
+                      >
+                        <img src={API_URL + item.image} alt={item.id} />
+                        <Box className="flex flex-col justify-center">
+                          <h2 className="font-bold">{item.name}</h2>
+                          <p>{item.text}</p>
+                        </Box>
+                      </Box>
+                    );
+                  })}
+                </Box>
+              </Box>
+            )}
           </div>
         </div>
       ) : (

@@ -1,3 +1,4 @@
+import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Axios } from "../../Api/Axios";
@@ -61,7 +62,7 @@ export default function CategoryPage() {
                     key={item.product.id}
                     to={`/product/${item.product.id}`}
                     onClick={windowScrollTo}
-                    className="flex flex-col items-center justify-center gap-3 w-[200px] rounded-xl min-h-[400px]"
+                    className="flex flex-col items-center justify-start gap-3 w-[200px] rounded-xl min-h-[400px]"
                   >
                     <img
                       src={`https://azamjon.pythonanywhere.com${item.image[0].image}`}
@@ -86,7 +87,13 @@ export default function CategoryPage() {
             <Loading />
           )}
         </>
-      ) : null}
+      ) : (
+        <Box className="w-full flex justify-center">
+          <h1 className="font-bold text-[#c53631]">
+            {lenguage === "ru" ? "Товары не найдены" : "Mahsulotlar topilmadi"}
+          </h1>
+        </Box>
+      )}
     </>
   );
 }
