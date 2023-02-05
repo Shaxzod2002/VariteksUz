@@ -58,7 +58,7 @@ export default function Navbar() {
         >
           <img src={Logo} alt="variteks" className="md:w-[200px] w-[150px]" />
         </NavLink>
-        <a href="tel:+998 90 631 97 97">
+        <a href="tel:+90 212 544 30 50">
           <Button
             variant="contained"
             color={"error"}
