@@ -24,7 +24,7 @@ export default function Footer() {
     });
   };
   return (
-    <footer className={"w-full min-h-[400px] p-4"}>
+    <footer className={"w-full min-h-[100px] p-4"}>
       <Box className="flex flex-wrap gap-4 justify-start">
         {contact.map((item, id) => {
           return (
