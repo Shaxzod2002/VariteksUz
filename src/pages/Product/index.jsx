@@ -92,7 +92,7 @@ export default function Product() {
                   {productItem["features"].map((item) => {
                     return (
                       <Box
-                        className="flex items-center gap-3 w-[500px]"
+                        className="flex justify-center items-center gap-3 flex-col w-[200px] text-center"
                         key={item.id}
                       >
                         <img src={API_URL + item.image} alt={item.id} />
@@ -117,7 +117,7 @@ export default function Product() {
                   {productItem["product-detail"].map((item) => {
                     return (
                       <Box
-                        className="flex items-center gap-3 w-[500px]"
+                        className="flex justify-center items-center gap-3 flex-col w-[200px] text-center"
                         key={item.id}
                       >
                         <img src={API_URL + item.image} alt={item.id} />

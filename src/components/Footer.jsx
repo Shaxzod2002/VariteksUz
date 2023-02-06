@@ -6,6 +6,7 @@ import parse from "html-react-parser";
 
 export default function Footer() {
   const [contact, setContact] = useState([]);
+  const [catalog, setCatalog] = useState([]);
   const lenguage = localStorage.getItem("lenguage")
     ? localStorage.getItem("lenguage")
     : "ru";
@@ -15,6 +16,13 @@ export default function Footer() {
       setContact(await (await Axios.get(url)).data);
     };
     getContact(lenguage === "ru" ? "contact/ru/" : "contact/uz/");
+  }, []);
+
+  useEffect(() => {
+    const getCatalog = async (url) => {
+      setCatalog(await (await Axios.get(url)).data);
+    };
+    getCatalog("about/ru/downlad/");
   }, []);
 
   const windowScrollTo = () => {
@@ -87,13 +95,19 @@ export default function Footer() {
           </Link>
         </Box>
         <Box className="flex flex-col gap-2 items-start w-[300px] max-w-[95%]">
-          <a
-            className="download"
-            download={"footer.png"}
-            href={"../../images/Footer/bg.png"}
-          >
-            {lenguage === "ru" ? "Каталог" : "Katalog"}
-          </a>
+          <h3>{lenguage === "ru" ? "Каталог" : "Katalog"}</h3>
+          {catalog.map((item) => {
+            return (
+              <a
+                href={item.file_pdf}
+                target={"_blank"}
+                key={item.id}
+                download={item.file_pdf}
+              >
+                {item.name}
+              </a>
+            );
+          })}
         </Box>
       </Box>
       <Box
