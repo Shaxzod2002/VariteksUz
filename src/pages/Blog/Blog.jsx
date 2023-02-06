@@ -5,7 +5,7 @@ import parse from "html-react-parser";
 import { Axios } from "../../Api/Axios";
 import Loading from "../../components/Loading";
 export default function BlogPage() {
-  const [subblog, setSubblog] = useState([]);
+  const [subblog, setSubblog] = useState({});
   const [blog, setBlog] = useState([]);
   const [loading, setLoading] = useState(false);
   const [blogLoading, setBlogLoading] = useState(false);
@@ -85,7 +85,7 @@ export default function BlogPage() {
     <div className="w-full min-h-screen">
       <div className="about-bg md:block hidden"></div>
       {loading ? (
-        <div className="md:pt-8 md:pl-3 pl-0 pt-[120px] w-full md:w-[70%] min-h-0 mx-auto flex md:flex-row flex-col-reverse gap-8 items-center md:items-start">
+        <div className="md:pt-8 md:pl-3 pl-0 pt-[120px] w-full lg:w-[80%] md:w-[90%] min-h-0 mx-auto flex md:flex-row flex-col-reverse gap-8 items-center md:items-start">
           <div className="md:w-[600px] w-full max-w-[90%] pb-4 flex flex-col gap-3">
             <h1 className="md:text-4xl text-3xl font-bold">{subblog.title}</h1>
             <p className="flex items-center gap-2">
@@ -104,7 +104,21 @@ export default function BlogPage() {
                   : uz_weeks[date.getDay()]}
               </span>
             </p>
-            <img src={subblog.image} alt={subblog.id} className="w-full" />
+            {subblog.image &&
+            (subblog.image.toLowerCase().includes("mp4") ||
+              subblog.image.toLowerCase().includes("mov") ||
+              subblog.image.toLowerCase().includes("wmv") ||
+              subblog.image.toLowerCase().includes("avi") ||
+              subblog.image.toLowerCase().includes("avchd") ||
+              subblog.image.toLowerCase().includes("webm")) ? (
+              <video
+                src={subblog.image}
+                controls
+                className="w-full max-h-[400px]"
+              ></video>
+            ) : (
+              <img src={subblog.image} alt={subblog.id} className="w-full" />
+            )}
             <div className="w-full py-4">{parse(subblog.text)}</div>
           </div>
           {blogLoading ? (

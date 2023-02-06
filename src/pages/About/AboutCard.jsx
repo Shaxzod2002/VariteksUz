@@ -56,7 +56,7 @@ export default function AboutCard() {
               <video
                 src={card.media}
                 controls
-                className="w-[600px] max-w-full"
+                className="w-full max-w-full"
               ></video>
             ) : null}
           </Box>

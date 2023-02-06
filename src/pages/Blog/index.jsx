@@ -46,7 +46,23 @@ export default function Blog() {
               blog.map((item) => (
                 <div key={item.id} className="w-[300px] flex flex-col gap-4">
                   <div className="w-[300px] group rounded-3xl overflow-hidden relative">
-                    <img src={item.image} alt={item.id} />
+                    {item.image &&
+                    (item.image.toLowerCase().includes("mp4") ||
+                      item.image.toLowerCase().includes("mov") ||
+                      item.image.toLowerCase().includes("wmv") ||
+                      item.image.toLowerCase().includes("avi") ||
+                      item.image.toLowerCase().includes("avchd") ||
+                      item.image.toLowerCase().includes("webm")) ? (
+                      <video
+                        src={item.image}
+                        controls
+                        className="w-full max-h-[375px]"
+                        autoPlay={"true"}
+                      ></video>
+                    ) : (
+                      <img src={item.image} alt={item.id} />
+                    )}
+
                     <Link
                       to={`/blog/${item.id}`}
                       className="duration-300 w-full min-h-[100px] group-hover:min-h-[120px] bg-red-500/70 absolute top-[calc(100%-80px)] group-hover:top-[calc(100%-120px)] text-white p-4"
