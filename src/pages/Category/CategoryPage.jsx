@@ -52,9 +52,7 @@ export default function CategoryPage() {
           {loading ? (
             <div className="md:w-[70%] w-full md:pt-8 pt-[120px] mx-auto min-h-0 py-5">
               <h1 className="md:text-4xl text-2xl font-bold md:text-left text-center">
-                {lenguage === "ru"
-                  ? "Брюшные Корсеты"
-                  : "Qorin bo'shlig'i korsetlari"}
+                {lenguage === "ru" ? "Брюшные Корсеты" : "Blory corsets"}
               </h1>
               <div className="flex flex-wrap my-6 md:justify-start justify-center items-center gap-8">
                 {curentProduct.map((item) => (
@@ -90,7 +88,7 @@ export default function CategoryPage() {
       ) : (
         <Box className="w-full flex justify-center">
           <h1 className="font-bold text-[#c53631]">
-            {lenguage === "ru" ? "Товары не найдены" : "Mahsulotlar topilmadi"}
+            {lenguage === "ru" ? "Товары не найдены" : "No goods were found"}
           </h1>
         </Box>
       )}

@@ -48,18 +48,18 @@ export default function BlogPage() {
     "Декабрь",
   ];
   const uz_months = [
-    "Yanvar",
-    "Fevral",
-    "Mart",
-    "Aprel",
+    "January",
+    "February",
+    "March",
+    "April",
     "May",
-    "Iyun",
-    "Iyul",
-    "Avgust",
-    "",
-    "Oktyabr",
-    "Noyabr",
-    "Dekabr",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   const ru_weeks = [
     "Понедельник",
@@ -72,13 +72,13 @@ export default function BlogPage() {
   ];
 
   const uz_weeks = [
-    "Dushanba",
-    "Seshanba",
-    "Chorshanba",
-    "Payshanba",
-    "Juma",
-    "Shanba",
-    "Yakshanba",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
   ];
   const date = new Date(subblog.date);
   return (

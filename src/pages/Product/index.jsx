@@ -70,7 +70,7 @@ export default function Product() {
               </div>
               <div className="w-[400px] max-w-[90%] md:min-h-[450px] min-h-0 gap-4 flex flex-col justify-between">
                 <h3 className="text-red-500 text-2xl font-semibold">
-                  {lenguage === "ru" ? "Показания" : "Ko'rsatkichlar"}
+                  {lenguage === "ru" ? "Показания" : "Indications"}
                 </h3>
                 <p>{parser(productItem.product.text)}</p>
                 <img
@@ -86,7 +86,7 @@ export default function Product() {
                 <h1 className="md:text-5xl text-3xl text-[#c53631] font-bold">
                   {lenguage === "ru"
                     ? "Характеристики изделия"
-                    : "Mahsulot xususiyatlari"}
+                    : "Product characteristics"}
                 </h1>
                 <Box className="w-full flex flex-wrap gap-4 justify-start pt-8">
                   {productItem["features"].map((item) => {
@@ -111,7 +111,7 @@ export default function Product() {
                 <h1 className="md:text-5xl text-3xl text-[#c53631] font-bold">
                   {lenguage === "ru"
                     ? "Информация о продукте"
-                    : "Mahsulot haqida ma'lumot"}
+                    : "Product information"}
                 </h1>
                 <Box className="w-full flex flex-wrap gap-4 justify-start pt-8">
                   {productItem["product-detail"].map((item) => {

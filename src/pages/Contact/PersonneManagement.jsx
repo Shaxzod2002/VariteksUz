@@ -9,67 +9,48 @@ export default function PersonnalManagement() {
       <div className="contact-bg md:block hidden"></div>
       <div className="personnel-management px-4 md:w-[70%] w-full md:pt-8 pt-[120px] mx-auto flex flex-col gap-4 pb-5">
         <h1 className="text-[40px] font-bold">
-          {lenguage === "ru" ? "ЧЕЛОВЕЧЕСКИЕ РЕСУРСЫ" : "KADRLAR BO'LIMI"}
+          {lenguage === "ru" ? "ЧЕЛОВЕЧЕСКИЕ РЕСУРСЫ" : "HUMAN RESOURCES"}
         </h1>
         <p className="text-[18px]">
           {lenguage === "ru"
             ? "Наша цель, как команды отдела кадров Variteks, состоит в том, чтобы привлечь в компанию нужных людей, поддержать, раскрыть потенциал и повысить их ценность, чтобы наша компания могла достичь своих целей. Наш принцип - быть справедливыми во всех правах, предоставляемых сотрудникам. Отдел кадров компании Variteks с 1958 года имеет стратегическое значение благодаря нашему антропоцентрическому подходу к управлению. Мы рады обеспечить справедливую и ориентированную на результат рабочую среду для наших сотрудников с помощью наших последовательных процедур и практик, соблюдая правила этики, равенства и конфиденциальности."
-            : "Variteks Inson resurslari jamoasi sifatida bizning maqsadimiz kompaniyamiz o'z maqsadlariga erishishi uchun kompaniyaga to'g'ri odamlarni jalb qilish, ularni qo'llab-quvvatlash, ularning salohiyatini ochish va ularga qiymat qo'shishdir. Bizning printsipimiz xodimlarga berilgan barcha huquqlarda adolatli bo'lishdir. Variteks Inson resurslari 1958 yildan beri boshqaruvga antropotsentrik yondashuvimiz tufayli strategik ahamiyatga ega. Biz axloq, tenglik va maxfiylik qoidalarini hurmat qilgan holda, izchil tartib va amaliyotlarimiz orqali xodimlarimiz uchun adolatli va natijalarga yo'naltirilgan ish muhitini ta'minlashdan mamnunmiz."}
+            : "Our goal as the Variteks Human Resources team is to bring the right people into the company, support them, unlock their potential and add value so that our company can achieve its goals. Our principle is to be fair in all rights granted to employees. Variteks Human Resources has been strategically important since 1958 thanks to our anthropocentric approach to management. We are pleased to provide a fair and results-oriented work environment for our employees through our consistent procedures and practices, respecting the rules of ethics, equality and confidentiality."}
         </p>
         <img src={image} alt="err" />
         <h3 className="text-[20px] font-bold">
-          {lenguage === "ru" ? "Образование" : "Ta'lim"}
+          {lenguage === "ru" ? "Образование" : "Education"}
         </h3>
         <p className="text-[18px]">
           {lenguage === "ru"
             ? `Каждый человек в семье Variteks оценивается на лучших позициях, где он может реализовать свои способности. С целью приобретения членства семьи, когда к нам присоединяется новый друг, Variteks предоставляет всю необходимую поддержку под названием "Ориентационное обучение".`
-            : `Variteks oilasidagi har bir kishi o'z qobiliyatlarini amalga oshirishi mumkin bo'lgan eng yaxshi lavozimlar uchun baholanadi. Oilaviy a'zolikni qo'lga kiritish maqsadida, bizga yangi do'st qo'shilganda, Variteks "Orientatsiya treningi" deb nomlangan barcha kerakli yordamni taqdim etadi.`}
+            : `Each person in the Variteks family is evaluated for the best positions where he can realize his abilities. For the purpose of acquiring family membership when a new friend joins us, Variteks provides all the necessary support called "Orientation Training".`}
         </p>
         <p className="text-[18px]">
           {lenguage === "ru"
             ? "Помимо их собственных требований, обучение наших сотрудников определяется их руководителями и отделом кадров. Для улучшения профессиональных навыков и компетенций организуются соответствующие тренинги, учитывающие личные запросы и потребности."
-            : "O'z talablaridan tashqari, bizning xodimlarimizni o'qitish ularning rahbarlari va kadrlar bo'limi tomonidan belgilanadi. Kasbiy mahorat va malakalarni oshirish uchun shaxsiy talab va ehtiyojlarni inobatga olgan holda tegishli treninglar tashkil etiladi."}
+            : "Apart from their own requirements, the training of our employees is determined by their supervisors and Human Resources. To improve professional skills and competencies, appropriate trainings are organized, taking into account personal requests and needs."}
         </p>
         <h3 className="text-[20px] font-bold">
-          {lenguage === "ru" ? "Производительность" : "Ishlash"}
+          {lenguage === "ru" ? "Производительность" : "Performance"}
         </h3>
         <p className="text-[18px]">
           {lenguage === "ru"
             ? "Наша компания, тщательно следящая за эффективностью работы, оценивает результаты деятельности своих сотрудников не реже двух раз в год. При окончательной оценке в конце года оценки эффективности работы увязываются с достаточно организованной системой премирования после тонкой проработки."
-            : "Ish samaradorligini diqqat bilan kuzatib boradigan kompaniyamiz yiliga kamida ikki marta o'z xodimlarining ish faoliyatini baholaydi. Yil oxirida yakuniy baholashda, ish faoliyatini baholash nozik mahoratdan keyin yaxshi tashkil etilgan bonus tizimi bilan bog'lanadi."}
+            : "Our company, which carefully monitors the efficiency of work, evaluates the performance of its employees at least twice a year. At the final evaluation at the end of the year, performance evaluations are linked to a well-organized bonus system after fine workmanship."}
         </p>
         <p className="text-[18px]">
           {lenguage === "ru"
             ? "Все идеи, повышающие эффективность работы наших сотрудников, имеют большое значение. По этому поводу не реже двух раз в год проводятся опросы, направленные на повышение производительности; эффективность работы оценивается путем оценки не только сотрудника, но и компании. Кроме того, для высокоэффективных сотрудников предусмотрено планирование карьеры."
-            : "Xodimlarimiz samaradorligini oshiradigan barcha g'oyalar katta ahamiyatga ega. Shu munosabat bilan yiliga kamida ikki marta samaradorlikni oshirishga qaratilgan so'rovlar o'tkaziladi; samaradorlik nafaqat xodimni, balki kompaniyani ham baholash orqali baholanadi. Bundan tashqari, yuqori natijalarga erishgan xodimlar uchun martaba rejalashtirish taqdim etiladi."}
+            : "All ideas that increase the efficiency of our employees are of great importance. On this occasion, surveys are conducted at least twice a year aimed at improving productivity; performance is assessed by evaluating not only the employee, but also the company. In addition, career planning is provided for high-performing employees."}
         </p>
         <h3 className="text-[20px] font-bold">
-          {lenguage === "ru" ? "Мероприятия" : "Voqealar"}
+          {lenguage === "ru" ? "Мероприятия" : "Events"}
         </h3>
         <p className="text-[18px]">
           {lenguage === "ru"
             ? "Хотя мы подчеркиваем, насколько важна для нашей компании концепция семьи, независимо от подчиненного, внутрикорпоративные мероприятия, повышающие мотивацию, проводятся часто для того, чтобы все наши сотрудники были счастливы, независимо от их обязанностей, и чтобы наши сотрудники не просто занимались делом, а работали так, как будто они занимаются своим делом."
-            : "Biz oila tushunchasining kompaniyamiz uchun qanchalik muhimligini ta'kidlagan bo'lsak-da, qanday bo'lmasin, motivatsiyani oshiradigan ichki korporativ tadbirlar tez-tez o'tkaziladi, bu bizning barcha xodimlarimiz, ularning vazifalaridan qat'i nazar, baxtli bo'lishlari va xodimlarimiz shunchaki biznes qiling, lekin ular o'z ishlarini qilayotgandek ishlang."}
+            : "Although we emphasize how important the concept of the family is to our company, regardless of the subordinate, internal corporate events that increase motivation are often carried out to ensure that all our employees are happy, regardless of their duties, and that our employees do not just do business, but work like they're doing their own thing."}
         </p>
-        <h3 className="text-[20px] font-bold">
-          {lenguage === "ru" ? "Career Opportunity" : "Karyera imkoniyati"}
-        </h3>
-        <div className="flex gap-5">
-          <a
-            href="kariyer.net"
-            target={"_blank"}
-            className="w-[200px] py-3 flex justify-center items-center text-white bg-red-600 rounded-lg cursor-pointer"
-          >
-            Kariyer.net
-          </a>
-          <a
-            href="elman.net"
-            target={"_blank"}
-            className="w-[200px] py-3 flex justify-center items-center text-white bg-red-600 rounded-lg cursor-pointer"
-          >
-            Elman.net
-          </a>
-        </div>
       </div>
     </>
   );

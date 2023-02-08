@@ -39,10 +39,10 @@ export default function Menu({ data }) {
         {lenguage === "ru" ? "Блог" : "Blog"}
       </NavLink>
       <button className="nav-link relative contact z-10">
-        {lenguage === "ru" ? "Контакты" : "Kontaktlar"}
+        {lenguage === "ru" ? "Контакты" : "Contacts"}
         <Box
           width={"250px"}
-          className="contact-pages left-0 flex flex-col items-start text-left gap-1 font-normal absolute top-full py-3 px-1 bg-white shadow-lg shadow-gray-400 rounded-md scale-0"
+          className="contact-pages left-0 flex flex-col items-start text-left gap-1 font-normal absolute top-full py-3 px-1 bg-white shadow-lg shadow-gray-400 rounded-md scale-0 z-[100]"
         >
           <NavLink
             to={"/contact-us"}
@@ -52,7 +52,7 @@ export default function Menu({ data }) {
             }}
             className="hover:text-[#c53631] contact-page-link"
           >
-            {lenguage === "ru" ? "Связаться с нами" : "Biz bilan bog'lanish"}
+            {lenguage === "ru" ? "Связаться с нами" : "Connect with us"}
           </NavLink>
           <NavLink
             to={"/personne-management"}
@@ -64,7 +64,7 @@ export default function Menu({ data }) {
           >
             {lenguage === "ru"
               ? "Управление-персоналом"
-              : "Xodimlarni boshqarish"}
+              : "Personnel management"}
           </NavLink>
         </Box>
       </button>

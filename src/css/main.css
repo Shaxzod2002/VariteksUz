@@ -10,11 +10,19 @@
 .category {
   text-align: center;
   padding: 5px 10px;
-  font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 600;
+  font-size: 1rem;
   border-radius: 4px;
   transition-duration: 0.3s;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.category {
+  color: #c53631;
+  font-weight: 800;
 }
 
 .nav-link:hover,
@@ -172,6 +180,31 @@ footer a.download {
   background-color: #c53631;
   color: #fff;
   font-size: x-large;
+}
+
+.home-category-link {
+  width: 1%;
+  height: 1.5%;
+  display: flex;
+  animation: animate-link 0.5s linear infinite;
+  background-color: #a20000;
+  transition-duration: 0.3s;
+  border-radius: 50%;
+}
+
+.home-category-link:hover {
+  background-color: #000;
+}
+
+@keyframes animate-link {
+  0%,
+  100% {
+    box-shadow: 0 0 10px 3px red;
+  }
+
+  50% {
+    box-shadow: 0 0 4px 1px #ff8787;
+  }
 }
 
 @media screen and (max-width: 768px) {

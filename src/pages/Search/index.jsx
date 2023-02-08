@@ -24,7 +24,7 @@ export default function Search() {
           onChange={(e) => {
             setSearch(e.target.value);
           }}
-          placeholder={lenguage === "ru" ? "Поиск" : "Qidirish"}
+          placeholder={lenguage === "ru" ? "Поиск" : "Search"}
           className="bg-transparent p-2 placeholder:text-white text-2xl outline-none border-none text-white"
         />
         <FaSearch className="text-2xl text-white" />

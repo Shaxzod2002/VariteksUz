@@ -79,7 +79,7 @@ export default function NewProducts() {
                     size="large"
                     sx={{ fontSize: "20px" }}
                   >
-                    {lenguage === "ru" ? "Подробности" : "Tafsilotlar"}
+                    {lenguage === "ru" ? "Подробности" : "Details"}
                   </Button>
                 </Link>
               </SwiperSlide>

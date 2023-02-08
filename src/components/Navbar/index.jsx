@@ -65,7 +65,7 @@ export default function Navbar() {
             sx={{ paddingY: "5px" }}
             className="capitalize"
           >
-            {lenguage === "ru" ? "свяжитесь с нами" : "Buyurtma berish"}
+            {lenguage === "ru" ? "Cвяжитесь с нами" : "Contact us"}
           </Button>
         </a>
       </Box>
@@ -109,10 +109,10 @@ export default function Navbar() {
             }}
           >
             <option>
-              {localStorage.getItem("lenguage") === "ru" ? "Язык" : "Til"}
+              {localStorage.getItem("lenguage") === "ru" ? "Язык" : "Lang"}
             </option>
             <option value="ru">Rus</option>
-            <option value="uz">Uzb</option>
+            <option value="en">Eng</option>
           </select>
         </Box>
       </Box>

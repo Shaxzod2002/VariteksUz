@@ -4,7 +4,8 @@ import { Axios } from "../../Api/Axios";
 import TopSlider from "./TopSlider";
 import parse from "html-react-parser";
 import MainImage from "../../images/Home-Page/main.png";
-import CategoryImage from "../../images/Home-Page/category-image.jpg";
+import categoryImageRus from "../../images/Home-Page/variteksrus.jpg";
+import categoryImageEng from "../../images/Home-Page/varitekseng.jpg";
 import { Link } from "react-router-dom";
 import NewProducts from "./NewProducts";
 import Loading from "../../components/Loading";
@@ -21,13 +22,20 @@ export default function Home() {
     };
     aboutUs(lenguage === "ru" ? "about/ru/about-us/" : "about/uz/about-us/");
   }, []);
+
+  const windowScrollTo = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <TopSlider />
-      <Box className="w-full flex md:flex-row flex-col min-h-0 pt-4">
-        <Box className="md:w-1/2 w-full md:pl-10 pl-2 py-4 flex flex-col gap-3">
-          <h1 className="text-4xl font-bold">
-            {lenguage === "ru" ? "Кто такой Варитекс" : "Varitex kim"}
+      <Box className="w-full flex lg:flex-row flex-col min-h-0 pt-4 md:justify-end">
+        <Box className="lg:w-1/2 w-full md:pl-10 pl-4 py-8 flex flex-col gap-3">
+          <h1 className="text-6xl font-bold">
+            {lenguage === "ru" ? "Кто такой Варитекс" : "WHO IS VARITEKS"}
             <span className="text-[#c53631]">?</span>
           </h1>
           {loading ? (
@@ -38,30 +46,110 @@ export default function Home() {
             <Loading />
           )}
           <Link to={"/about"}>
-            <Button variant="contained" color="error">
+            <Button variant="contained" sx={{ fontSize: "25px" }} color="error">
               {lenguage === "ru"
                 ? "Дополнительная Информация"
-                : "Qo'shimcha ma'lumot"}
+                : "More Information"}
             </Button>
           </Link>
         </Box>
-        <Box className="md:w-1/2 w-full flex justify-end">
-          <img src={MainImage} className="max-w-[90%]" alt="main" />
+        <Box className="lg:w-[40%] w-full flex justify-end">
+          <img
+            src={MainImage}
+            className="max-w-[90%] object-cover"
+            alt="main"
+          />
         </Box>
       </Box>
-      <Box>
-        <img src={CategoryImage} className="w-full" alt="bg" />
+      <Box className="relative">
+        <img
+          src={lenguage === "ru" ? categoryImageRus : categoryImageEng}
+          className="w-full"
+          alt="bg"
+        />
+        <Link
+          className="home-category-link absolute top-[33.7%] left-[50.7%]"
+          to={"/category-page/1/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[42%] left-[49.2%]"
+          to={"/category-page/2/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[40.6%] left-[54.2%]"
+          to={"/category-page/3/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[45.8%] left-[45.2%]"
+          to={"/category-page/4/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[54.7%] left-[34.3%]"
+          to={"/category-page/5/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[57.3%] left-[48.6%]"
+          to={"/category-page/6/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[59.8%] left-[53%]"
+          to={"/category-page/7/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[62.8%] left-[53%]"
+          to={"/category-page/8/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[69.5%] left-[49%]"
+          to={"/category-page/9/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[74.5%] left-[54.2%]"
+          to={"/category-page/10/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[78.2%] left-[47.5%]"
+          to={"/category-page/11/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[81.2%] left-[54%]"
+          to={"/category-page/12/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[87%] left-[45.4%]"
+          to={"/category-page/13/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[88.5%] left-[54.7%]"
+          to={"/category-page/14/1"}
+          onClick={windowScrollTo}
+        ></Link>
       </Box>
-      <Box className="w-full flex md:flex-row flex-col">
-        <Box className="md:w-1/2 w-full md:pl-10 pl-2 flex flex-col gap-3 md:pt-8 py-4">
-          <h1 className="lg:text-5xl text-3xl font-bold text-[#c53631]">
-            {lenguage === "ru" ? "Новая продукция" : "Yangi mahsulotlar"}
-          </h1>
-          <p className="lg:text-lg w-[400px] max-w-[90%]">
-            {lenguage === "ru"
-              ? "Наша научно-исследовательская деятельность продолжается непрерывно, чтобы наши продукты оставались актуальными и не отставали от сегодняшнего времени, когда изменения и развитие ускоряются во всех областях. Разрабатывая существующие и разрабатывая новые продукты, мы руководствуемся принципом совместной поддержки и комфорта. Превращение некоторых наших маленьких штрихов в большие преимущества делает нас счастливыми и дает нам мотивацию на будущее."
-              : "Mahsulotlarimiz dolzarb bo‘lib qolishi va barcha sohalarda o‘zgarishlar va rivojlanish jadallashib borayotgan bugungi zamon bilan hamnafas bo‘lishini ta’minlash uchun tadqiqot va ishlanmalarimiz uzluksiz davom etmoqda. Mavjud mahsulotlarni ishlab chiqish va yangi mahsulotlarni ishlab chiqishda biz birgalikda qo'llab-quvvatlash va qulaylik tamoyiliga amal qilamiz. Kichik teginishlarimizni katta foydaga aylantirish bizni xursand qiladi va kelajakka undaydi."}
-          </p>
+      <Box className="w-full flex md:flex-row flex-col gap-4">
+        <Box className="md:w-1/2 w-full md:pl-10 pl-2 flex flex-col gap-3 md:pt-8 py-4 items-end">
+          <Box className="w-[600px] mt-[50px]">
+            <h1 className="lg:text-6xl text-3xl font-extrabold text-[#c53631]">
+              {lenguage === "ru" ? "Новая продукция" : "NEW PRODUCTS"}
+            </h1>
+            <p className="lg:text-[20px] max-w-[90%]">
+              {lenguage === "ru"
+                ? "Наша научно-исследовательская деятельность продолжается непрерывно, чтобы наши продукты оставались актуальными и не отставали от сегодняшнего времени, когда изменения и развитие ускоряются во всех областях. Разрабатывая существующие и разрабатывая новые продукты, мы руководствуемся принципом совместной поддержки и комфорта. Превращение некоторых наших маленьких штрихов в большие преимущества делает нас счастливыми и дает нам мотивацию на будущее."
+                : "Our R&D activities are in progress continuously in order to keep our products up-to-date and catch the age in today's world where change and development is accelerating in every field. While designing new products and developing our existing products we act with the principle of offering support and comfort together. The fact that some of our small touches turn into great benefits blisses us out and motivate us for the future."}
+            </p>
+          </Box>
         </Box>
         <Box className="md:w-1/2 w-full py-5">
           <NewProducts />

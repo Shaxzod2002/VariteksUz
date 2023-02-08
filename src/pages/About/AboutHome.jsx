@@ -35,28 +35,23 @@ export default function AboutHome() {
         <>
           {home.comment.length !== 0 && (
             <Swiper
-              loop={true}
-              slidesPerView={1}
               spaceBetween={10}
-              centeredSlides={true}
               breakpoints={{
-                400: {
-                  slidesPerView: 2,
-                  centeredSlides: false,
+                0: {
+                  slidesPerView: 1,
                 },
                 600: {
                   slidesPerView: 2,
-                  centeredSlides: false,
                 },
               }}
               modules={[Pagination, Navigation]}
               navigation={{ clickable: true }}
-              className="md:w-[80%] w-full mx-auto min-h-0 mySwiper"
+              className="md:w-[80%] w-full mx-auto min-h-0 mySwiper py-4"
             >
               {home.comment.map((item) => {
                 return (
                   <SwiperSlide
-                    className="w-[240px] max-w-full min-h-[200px] flex flex-col items-center justify-between gap-2"
+                    className="w-[240px] max-w-full min-h-[200px] flex flex-col items-center justify-between gap-2 rounded-lg shadow-lg shadow-gray-400 py-2 px-12 text-center"
                     key={item.id}
                   >
                     <img
@@ -78,7 +73,7 @@ export default function AboutHome() {
             <Box className="mt-20 mb-4 md:w-[80%] w-full mx-auto min-h-[100px] flex flex-col justify-center items-center gap-4">
               <Box className="relative w-full h-[4px] bg-gray-400 flex justify-center items-center">
                 <h1 className="absolute -top-10">
-                  {lenguage === "ru" ? "НАШИ ПАРТНЕРЫ" : "BIZNING HAMKORLIK"}
+                  {lenguage === "ru" ? "НАШИ ПАРТНЕРЫ" : "OUR PARTNERS"}
                 </h1>
                 <Box className="w-[30%] h-[4px] bg-blue-500"></Box>
               </Box>
@@ -98,7 +93,7 @@ export default function AboutHome() {
             <Box className="mt-20 mb-4 md:w-[80%] w-full mx-auto min-h-[100px] flex flex-col justify-center items-center gap-4">
               <Box className="relative w-full h-[4px] bg-gray-400 flex justify-center items-center">
                 <h1 className="absolute -top-10">
-                  {lenguage === "ru" ? "НАМ ДОВЕРЯЮТ" : "BIZGA ISHONCHIDAN"}
+                  {lenguage === "ru" ? "НАМ ДОВЕРЯЮТ" : "WE ARE TRUSTED"}
                 </h1>
                 <Box className="w-[30%] h-[4px] bg-blue-500"></Box>
               </Box>

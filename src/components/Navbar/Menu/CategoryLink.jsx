@@ -39,7 +39,7 @@ export default function CategoryLink({ data }) {
     >
       {loading ? (
         <Box
-          className="category-menu w-full min-h-[60px] flex justify-between items-start gap-1 py-4 flex-wrap"
+          className="category-menu w-full min-h-[60px] flex justify-center items-start gap-4 py-4 flex-wrap"
           paddingX={4}
         >
           {category.map((item) => {
@@ -55,7 +55,7 @@ export default function CategoryLink({ data }) {
                       ? "/category/3"
                       : "/category/4"
                   }
-                  className="category"
+                  className=" w-[250px] category inline-block text-left border-b-2 rounded-b-none hover:rounded-[4px] border-[#c53631]"
                   onClick={() => {
                     data.cannabisProductionActive();
                     data.menuActive();
@@ -63,23 +63,25 @@ export default function CategoryLink({ data }) {
                 >
                   {item.name}
                 </NavLink>
-                {subcategory.map(
-                  (sub) =>
-                    sub.category.id === item.id && (
-                      <Box key={sub.id} className="py-1">
-                        <NavLink
-                          to={`/category-page/${sub.id}/1`}
-                          className="duration-300 pl-2 text-sm subcategory"
-                          onClick={() => {
-                            data.cannabisProductionActive();
-                            data.menuActive();
-                          }}
-                        >
-                          {sub.name}
-                        </NavLink>
-                      </Box>
-                    )
-                )}
+                <Box className="mt-4 w-[250px]">
+                  {subcategory.map(
+                    (sub) =>
+                      sub.category.id === item.id && (
+                        <Box key={sub.id}>
+                          <NavLink
+                            to={`/category-page/${sub.id}/1`}
+                            className="duration-300 text-[16px] subcategory"
+                            onClick={() => {
+                              data.cannabisProductionActive();
+                              data.menuActive();
+                            }}
+                          >
+                            {sub.name}
+                          </NavLink>
+                        </Box>
+                      )
+                  )}
+                </Box>
               </Box>
             );
           })}

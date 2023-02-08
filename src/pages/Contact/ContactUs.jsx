@@ -27,12 +27,9 @@ export default function ContactUs() {
     <>
       <div className="contact-bg md:block hidden"></div>
       <div className="w-full flex md:flex-row flex-col justify-end md:pt-8 pt-[120px] min-h-0 ">
-        <div className="md:w-[40%] w-full flex flex-col gap-3 md:pr-6 pr-0 md:pl-0 pl-4">
-          <h1 className="text-[25px] text-red-600 font-bold">
-            {lenguage === "ru" ? "Социальные сети" : "Ijtimoiy tarmoqlar"}
-          </h1>
+        <div className="md:w-[40%] w-full flex flex-col gap-3 md:pr-6 pr-0 md:pl-0 pl-4 py-5">
           <h1 className="text-[25px] font-bold">
-            {lenguage === "ru" ? "Контакты" : "Kontaktlar"}
+            {lenguage === "ru" ? "Контакты" : "Contacts"}
           </h1>
           {loading ? (
             contact.map((item, id) => (
@@ -62,32 +59,32 @@ export default function ContactUs() {
         </div>
         <div className="md:w-[50%] w-full contact-right min-h-[50vh] px-5 py-5 flex flex-col gap-5">
           <h1 className="text-[25px] font-bold">
-            {lenguage === "ru" ? "Форма для контактов" : "Aloqa shakli"}
+            {lenguage === "ru" ? "Форма для контактов" : "Contact form"}
           </h1>
           <input
             type="text"
             className="w-[400px] max-w-full border-[2px] border-black rounded-lg py-2 px-3"
-            placeholder={lenguage === "ru" ? "Фамилия Имя" : "Familiyasi Ism"}
+            placeholder={lenguage === "ru" ? "Фамилия Имя" : "Full name"}
           />
           <input
             type="text"
             className="w-[400px] max-w-full border-[2px] border-black rounded-lg py-2 px-3"
             placeholder={
-              lenguage === "ru" ? "Электронный адрес" : "Elektron manzil"
+              lenguage === "ru" ? "Электронный адрес" : "Email address"
             }
           />
           <input
             type="text"
             className="w-[400px] max-w-full border-[2px] border-black rounded-lg py-2 px-3"
-            placeholder={lenguage === "ru" ? "Тематика" : "Mavzu"}
+            placeholder={lenguage === "ru" ? "Тематика" : "Subject"}
           />
           <textarea
             type="text"
             className="w-[400px] max-w-full h-[100px] border-[2px] border-black rounded-lg px-3 resize-none pt-2"
-            placeholder={lenguage === "ru" ? "Сообщение" : "Xabar"}
+            placeholder={lenguage === "ru" ? "Сообщение" : "Message"}
           ></textarea>
           <button className="w-[200px] py-3 flex justify-center items-center text-white bg-red-600 rounded-lg cursor-pointer hover:text-red-600 hover:bg-white hover:border-red-600 border-[2px] hover:duration-500">
-            {lenguage === "ru" ? "Кнопка Послать" : "Yuborish tugmasi"}
+            {lenguage === "ru" ? "Кнопка Послать" : "Send button"}
           </button>
         </div>
       </div>

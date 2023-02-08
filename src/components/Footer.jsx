@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Axios } from "../Api/Axios";
 import parse from "html-react-parser";
-
+import logo from "../images/logo-light.webp"
 export default function Footer() {
   const [contact, setContact] = useState([]);
   const [catalog, setCatalog] = useState([]);
@@ -34,68 +34,49 @@ export default function Footer() {
   return (
     <footer className={"w-full min-h-[100px] p-4"}>
       <Box className="flex flex-wrap gap-4 justify-start">
-        {contact.map((item, id) => {
-          return (
-            <Box className="text-white w-[300px] max-w-[95%]" key={id + 1}>
-              <h3 className="text-white font-semibold">
-                {lenguage === "ru" ? "Контакты" : "Kontaktlar"}
-              </h3>
-              {parse(item.address)}
-              <Box className="py-3">
-                <h3>
-                  {lenguage === "ru" ? "Variteks Medikal" : "Variteks Medikal"}
-                </h3>
-                <Box className="flex flex-col gap-1 items-start">
-                  <a href={`tel:${item.mobile_phone}`}>{item.mobile_phone}</a>
-                  <a href={`tel:${item.facts_phone}`}>{item.facts_phone}</a>
-                  <a href="mailto:info@variteks.com">info@variteks.com</a>
-                </Box>
-              </Box>
-            </Box>
-          );
-        })}
-        <Box className="flex flex-col gap-2 items-start w-[300px] max-w-[95%]">
-          <h3>{lenguage === "ru" ? "Корпоративный" : "Korporativ"}</h3>
+        <Box className="flex flex-col gap-2 items-start w-[250px] max-w-[95%]">
+          <img src={logo} alt="Varitek Uz" />
+        </Box>
+        <Box className="flex flex-col gap-2 items-start w-[250px] max-w-[95%]">
+          <h3>{lenguage === "ru" ? "Корпоративный" : "Corporate"}</h3>
           <Link to={"/about"} onClick={windowScrollTo}>
-            {lenguage === "ru" ? "О нас" : "Biz haqimizda"}
+            {lenguage === "ru" ? "О нас" : "About us"}
           </Link>
           <Link to={"/certificate"} onClick={windowScrollTo}>
-            {lenguage === "ru" ? "Сертификаты" : "Sertifikatlar"}
+            {lenguage === "ru" ? "Сертификаты" : "Certificates"}
           </Link>
           <Link to={"/personne-management"} onClick={windowScrollTo}>
             {lenguage === "ru"
               ? "Управление-персоналом"
-              : "Xodimlarni boshqarish"}
+              : "Personnel management"}
           </Link>
           <Link to={"/blog"} onClick={windowScrollTo}>
             {lenguage === "ru" ? "Блог" : "Blog"}
           </Link>
         </Box>
-        <Box className="flex flex-col gap-2 items-start w-[300px] max-w-[95%]">
-          <h3>
-            {lenguage === "ru" ? "Наша Продукция" : "Bizning ishlab chiqarish"}
-          </h3>
+        <Box className="flex flex-col gap-2 items-start w-[250px] max-w-[95%]">
+          <h3>{lenguage === "ru" ? "Наша Продукция" : "Our production"}</h3>
           <Link to={"/category/1"} onClick={windowScrollTo}>
             {lenguage === "ru"
               ? "Ортопедические Издели"
-              : "Ortopedik mahsulotlar"}
+              : "Orthopedic products"}
           </Link>
           <Link to={"/category/2"} onClick={windowScrollTo}>
             {lenguage === "ru"
               ? "Антиварикозные Изделия"
-              : "Varikozga qarshi mahsulotlar"}
+              : "Anti varicose products"}
           </Link>
           <Link to={"/category/3"} onClick={windowScrollTo}>
             {lenguage === "ru"
               ? "Липосакционные корсеты"
-              : "Liposaktsiya korsetlari"}
+              : "Liposuction corsets"}
           </Link>
           <Link to={"/category/4"} onClick={windowScrollTo}>
-            {lenguage === "ru" ? "На заказ" : "Buyurtmaga"}
+            {lenguage === "ru" ? "На заказ" : "To order"}
           </Link>
         </Box>
-        <Box className="flex flex-col gap-2 items-start w-[300px] max-w-[95%]">
-          <h3>{lenguage === "ru" ? "Каталог" : "Katalog"}</h3>
+        <Box className="flex flex-col gap-2 items-start w-[250px] max-w-[95%]">
+          <h3>{lenguage === "ru" ? "Каталог" : "Catalog"}</h3>
           {catalog.map((item) => {
             return (
               <a
@@ -109,6 +90,26 @@ export default function Footer() {
             );
           })}
         </Box>
+        {contact.map((item, id) => {
+          return (
+            <Box className="text-white w-[250px] max-w-[95%]" key={id + 1}>
+              <h3 className="text-white font-semibold">
+                {lenguage === "ru" ? "Контакты" : "Contacts"}
+              </h3>
+              {parse(item.address)}
+              <Box className="py-3">
+                <h3>
+                  {lenguage === "ru" ? "Variteks Medikal" : "Variteks medikal"}
+                </h3>
+                <Box className="flex flex-col gap-1 items-start">
+                  <a href={`tel:${item.mobile_phone}`}>{item.mobile_phone}</a>
+                  <a href={`tel:${item.facts_phone}`}>{item.facts_phone}</a>
+                  <a href="mailto:info@variteks.com">info@variteks.com</a>
+                </Box>
+              </Box>
+            </Box>
+          );
+        })}
       </Box>
       <Box
         sx={{ width: "100%", textAlign: "center", color: "white" }}
@@ -117,7 +118,7 @@ export default function Footer() {
         <p>
           {lenguage === "ru"
             ? "Copryright © Variteks 2023 | Защита авторских прав."
-            : "Mualliflik huquqi © Variteks 2023 | Mualliflik huquqi himoyasi."}
+            : "Copryright © Variteks 2023 | All Rights Reserved."}
         </p>
       </Box>
     </footer>

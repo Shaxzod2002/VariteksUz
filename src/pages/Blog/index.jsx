@@ -38,7 +38,7 @@ export default function Blog() {
               {lenguage === "ru" ? "Генеральная" : "General"}
             </Link>
             <Link to={"/blog/2"} className="text-xl">
-              {lenguage === "ru" ? "Здоровье" : "Salomatlik"}
+              {lenguage === "ru" ? "Здоровье" : "Health"}
             </Link>
           </div>
           <div className="w-full flex flex-wrap gap-5 justify-center md:justify-start">
@@ -57,7 +57,6 @@ export default function Blog() {
                         src={item.image}
                         controls
                         className="w-full max-h-[375px]"
-                        autoPlay={"true"}
                       ></video>
                     ) : (
                       <img src={item.image} alt={item.id} />

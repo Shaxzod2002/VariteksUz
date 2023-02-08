@@ -14,7 +14,7 @@ export const DataImage = [
     text:
       lenguage === "ru"
         ? "ТЕБЕ НЕОБХОДИМО ДВИГАТЬСЯ ДАЛЬШЕ ПРИ ЛЮБЫХ УСЛОВИЯХ."
-        : "HAR QANDAY SHART BO'LGAN BO'LGAN KO'CHISHINGIZ KERAK.",
+        : "YOU MUST GO ON IN ALL CONDITIONS.",
     headerOverlay,
   },
   {
@@ -24,7 +24,7 @@ export const DataImage = [
     text:
       lenguage === "ru"
         ? "ENJOYING THE LIFE ТЕБЕ НЕОБХОДИМО ДВИГАТЬСЯ ДАЛЬШЕ НАСЛАЖДАЯСЬ ЖИЗНЬЮ."
-        : "HAYOTDAN ROZAT OLISH VA HAYOTDAN ROZAT OSHINGIZ KERAK.",
+        : "YOU MUST GO ON ENJOYING THE LIFE.",
     headerOverlay,
   },
   {
@@ -34,7 +34,7 @@ export const DataImage = [
     text:
       lenguage === "ru"
         ? "ТЕБЕ НЕОБХОДИМО ДВИГАТЬСЯ ДАЛЬШЕ ПРЕКРАСНЫМ ДНЕМ"
-        : "KUNNI GO'ZAL O'TKAZISHINGIZ KERAK",
+        : "YOU MUST GO ON FOR BEAUTIFUL DAYS.",
     headerOverlay,
   },
   {
@@ -44,7 +44,7 @@ export const DataImage = [
     text:
       lenguage === "ru"
         ? "ТЕБЕ НЕОБХОДИМО ДВИГАТЬСЯ ДАЛЬШЕ ИМЕЯ СВОЙ СОБСТВЕННЫЙ СТИЛЬ."
-        : "O'Z USLINGIZ BILAN BO'YIB O'TISHINGIZ KERAK.",
+        : "YOU MUST GO ON WITH YOUR OWN STYLE.",
     headerOverlay,
   },
 ];

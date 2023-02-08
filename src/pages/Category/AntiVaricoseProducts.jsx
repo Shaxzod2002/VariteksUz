@@ -42,19 +42,17 @@ const AntiVaricoseProducts = () => {
             <h1 className="md:text-4xl text-2xl font-bold">
               {lenguage === "ru"
                 ? "Чулки От Варикоза"
-                : "Varikoz tomirlari uchun paypoqlar"}
+                : "Stockings from varicose veins"}
             </h1>
             <p className="text-[18px]">
               {lenguage === "ru"
                 ? "Все наши компрессионные чулки производятся на высокотехнологичном оборудовании в соответствии с требованиями стандарта CEN(Европейский комитет по стандартизации). Во всех наших изделиях мы используем высококачественное сырье. Дизайн наших чулок разработан и для мужчин, и для женщин. Компрессионные чулки имеют 3 разных уровня давления: Ccl I - Ccl II - Ccl III. Наши носки выпускаются в двух вариантах: с открытым и закрытым носком. Мы предлагаем два варианта расцветок для средних и легких компрессионных чулок: бежевый и черный. Также в линейке легких компрессионных носков, у нас представлен выбор спортивных носков и носков для ежедневной активной компрессии."
-                : "Bizning barcha kompressor paypoqlarimiz CEN (Yevropa standartlashtirish qo'mitasi) standarti talablariga muvofiq yuqori texnologiyali uskunalarda ishlab chiqariladi. Biz barcha mahsulotlarimizda yuqori sifatli xom ashyolardan foydalanamiz. Bizning paypoqlarimiz erkaklar va ayollar uchun mo'ljallangan. Siqish paypoqlari 3 xil bosim darajasiga ega: Ccl I - Ccl II - Ccl III. Bizning paypoqlarimiz ikkita versiyada mavjud: ochiq va yopiq oyoq. Biz o'rta va engil siqish paypoqlari uchun ikkita rang variantini taklif qilamiz: bej va qora. Bundan tashqari, engil siqish paypoqlari qatorida bizda kundalik faol siqish uchun sport paypoqlari va paypoqlar tanlovi mavjud."}
+                : "All our compression stockings are produced on high -tech equipment in accordance with the requirements of the CEN standard (European Standardization Committee). In all our products, we use high -quality raw materials. The design of our stockings is developed for both men and women. Compression stockings have 3 different pressure levels: CCL I - CCL II - CCL III. Our socks are available in two versions: with an open and closed toe. We offer two options for colors for medium and light compression stockings: beige and black. Also in the line of light compression socks, we have a choice of sports socks and socks for daily active compression."}
             </p>
           </div>
           <div className="md:w-[70%] w-full mx-auto min-h-0 py-5 md:pl-0 pl-3">
             <h3 className="md:text-4xl text-2xl font-bold md:text-left text-center">
-              {lenguage === "ru"
-                ? "Брюшные Корсеты"
-                : "Qorin bo'shlig'i korsetlari"}
+              {lenguage === "ru" ? "Брюшные Корсеты" : "Blory corsets"}
             </h3>
             <div className="w-full flex flex-wrap my-6 md:justify-start justify-center items-start gap-6">
               {filterSubcategory.map((item) => (
