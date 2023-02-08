@@ -62,6 +62,13 @@ export default function Home() {
         </Box>
       </Box>
       <Box className="relative">
+        <Link
+          to={"/search"}
+          className="w-[300px] absolute top-10 left-1/2 bg-[#a20000] text-white p-3 -translate-x-1/2 rounded-lg text-center"
+          onClick={windowScrollTo}
+        >
+          {lenguage === "ru" ? "Поиск" : "Search"}
+        </Link>
         <img
           src={lenguage === "ru" ? categoryImageRus : categoryImageEng}
           className="w-full"
