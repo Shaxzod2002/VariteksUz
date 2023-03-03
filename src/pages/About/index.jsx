@@ -9,9 +9,11 @@ export default function About() {
   return (
     <>
       <Box className="about-bg md:flex hidden"></Box>
-      <AboutUs />
-      <AboutCard />
-      <AboutHome />
+      <div className="min-h-screen">
+        <AboutUs />
+        <AboutCard />
+        <AboutHome />
+      </div>
     </>
   );
 }

@@ -17,7 +17,7 @@ export default function Menu({ data }) {
           data.menuActive();
         }}
       >
-        {lenguage === "ru" ? "О нас" : "Biz haqimizda"}
+        {lenguage === "ru" ? "О нас" : "About"}
       </NavLink>
       <button
         className="nav-link"
@@ -25,7 +25,7 @@ export default function Menu({ data }) {
           data.cannabisProductionActive();
         }}
       >
-        {lenguage === "ru" ? "Наша продукция" : "Bizning mahsulotimiz"}
+        {lenguage === "ru" ? "Наша продукция" : "Our production"}
       </button>
       <CategoryLink data={data} />
       <NavLink

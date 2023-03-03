@@ -31,13 +31,9 @@ export default function CategoryPage() {
   let subcategory = product.filter(
     (item) =>
       item.product.sub_category.id ===
-        Number(
-          location.pathname.slice(
-            location.pathname.length - 3,
-            location.pathname.length - 2
-          )
-        ) && item
+        Number(location.pathname.split("/")[2]) && item
   );
+  console.log(location.pathname.split("/")[2]);
   const [curentPage, setCurentPage] = useState(1);
   const productPerPage = 6;
   const indexOfLastPage = curentPage * productPerPage;
@@ -50,7 +46,7 @@ export default function CategoryPage() {
       {curentProduct.length > 0 ? (
         <>
           {loading ? (
-            <div className="md:w-[70%] w-full md:pt-8 pt-[120px] mx-auto min-h-0 py-5">
+            <div className="md:w-[70%] w-full md:pt-8 pt-[120px] mx-auto min-h-[50vh] py-5">
               <h1 className="md:text-4xl text-2xl font-bold md:text-left text-center">
                 {lenguage === "ru" ? "Брюшные Корсеты" : "Blory corsets"}
               </h1>
@@ -86,7 +82,7 @@ export default function CategoryPage() {
           )}
         </>
       ) : (
-        <Box className="w-full flex justify-center">
+        <Box className="w-full flex justify-center min-h-[50vh]">
           <h1 className="font-bold text-[#c53631]">
             {lenguage === "ru" ? "Товары не найдены" : "No goods were found"}
           </h1>

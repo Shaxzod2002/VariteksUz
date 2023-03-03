@@ -47,7 +47,7 @@ export default function Product() {
               {productItem.product.name}
             </h2>
             <div className="my-5 w-full flex md:flex-row flex-col md:justify-start justify-center items-center gap-4">
-              <div className="w-[400px] max-w-[90%] h-full border-2 border-red-500 rounded-lg overflow-hidden">
+              <div className="w-[400px] max-w-[90%] h-full border-2 border-red-500 rounded-lg overflow-hidden relative">
                 <Swiper
                   navigation={true}
                   modules={[Navigation]}
@@ -57,12 +57,19 @@ export default function Product() {
                 >
                   {productItem["main-image"].map((item) => {
                     return (
-                      <SwiperSlide>
+                      <SwiperSlide key={item.id}>
                         <img
                           className="w-full"
                           src={`https://azamjon.pythonanywhere.com${item.image}`}
                           alt={item.id}
                         />
+                        {!productItem.product.is_active && (
+                          <Box className="absolute top-0 left-0 w-full h-[510px] bg-black/70 flex justify-center items-center">
+                            <h1 className="bg-black w-full text-white text-center uppercase">
+                              The product is not available
+                            </h1>
+                          </Box>
+                        )}
                       </SwiperSlide>
                     );
                   })}
@@ -134,7 +141,9 @@ export default function Product() {
           </div>
         </div>
       ) : (
-        <Loading />
+        <div className="flex w-full min-h-[50vh] justify-center items-center">
+          <Loading />
+        </div>
       )}
     </>
   );

@@ -57,18 +57,26 @@ export default function ContactUs() {
             <a href="mailto:info@variteks.com">info@variteks.uz</a>
           </div>
         </div>
-        <div className="md:w-[50%] w-full contact-right min-h-[50vh] px-5 py-5 flex flex-col gap-5">
+        <form
+          action="https://formsubmit.co/ba2062fb819f68d09c26f661dba4b25d"
+          method="POST"
+          className="md:w-[50%] w-full contact-right min-h-[50vh] px-5 py-5 flex flex-col gap-5"
+        >
           <h1 className="text-[25px] font-bold">
             {lenguage === "ru" ? "Форма для контактов" : "Contact form"}
           </h1>
           <input
             type="text"
             className="w-[400px] max-w-full border-[2px] border-black rounded-lg py-2 px-3"
+            name="fullname"
+            required
             placeholder={lenguage === "ru" ? "Фамилия Имя" : "Full name"}
           />
           <input
             type="text"
             className="w-[400px] max-w-full border-[2px] border-black rounded-lg py-2 px-3"
+            name="email"
+            required
             placeholder={
               lenguage === "ru" ? "Электронный адрес" : "Email address"
             }
@@ -76,17 +84,21 @@ export default function ContactUs() {
           <input
             type="text"
             className="w-[400px] max-w-full border-[2px] border-black rounded-lg py-2 px-3"
+            name="subject"
+            required
             placeholder={lenguage === "ru" ? "Тематика" : "Subject"}
           />
           <textarea
             type="text"
+            name="message"
+            required
             className="w-[400px] max-w-full h-[100px] border-[2px] border-black rounded-lg px-3 resize-none pt-2"
             placeholder={lenguage === "ru" ? "Сообщение" : "Message"}
           ></textarea>
           <button className="w-[200px] py-3 flex justify-center items-center text-white bg-red-600 rounded-lg cursor-pointer hover:text-red-600 hover:bg-white hover:border-red-600 border-[2px] hover:duration-500">
             {lenguage === "ru" ? "Кнопка Послать" : "Send button"}
           </button>
-        </div>
+        </form>
       </div>
       <Maps />
     </>

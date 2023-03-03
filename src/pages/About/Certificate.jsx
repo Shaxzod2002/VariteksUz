@@ -61,7 +61,7 @@ export default function Certificate() {
         </Box>
       </Box>
       <Box className="about-bg md:flex hidden"></Box>
-      <Box className="lg:w-[70%] md:w-[80%] w-full mx-auto md:py-8 pt-[100px] flex flex-col gap-6">
+      <Box className="lg:w-[70%] md:w-[80%] min-h-[50vh] w-full mx-auto md:py-8 pt-[100px] flex flex-col gap-6">
         <h1 className="md:text-5xl text-3xl font-bold md:text-left text-center">
           {lenguage === "ru" ? "Cертификаты" : "Certificates"}
         </h1>

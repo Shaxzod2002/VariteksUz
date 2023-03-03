@@ -75,7 +75,7 @@ export default function AboutCard() {
           aboutCard.map((card) => (
             <Box key={card.id}>
               <Link
-                to={card.title === "Сертификаты" ? "/certificate" : "#"}
+                to={card.id === 5 ? "/certificate" : "#"}
                 className="text-center w-[230px] py-3 flex flex-col gap-3 cursor-pointer"
                 onClick={() => {
                   setModul(true);

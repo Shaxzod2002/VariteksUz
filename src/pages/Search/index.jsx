@@ -13,7 +13,7 @@ export default function Search() {
     ? localStorage.getItem("lenguage")
     : "ru";
   return (
-    <div className="search flex justify-center items-center">
+    <div className="min-h-screen search flex justify-center items-center">
       <form
         action="/search-products/1"
         className="flex w-[500px] max-w-[90%] justify-between items-center border-b-2 border-white"

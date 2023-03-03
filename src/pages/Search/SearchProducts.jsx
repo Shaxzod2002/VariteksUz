@@ -38,7 +38,7 @@ export default function SearchProduct() {
   return (
     <>
       <div className="product-category md:block hidden"></div>
-      <div className="md:w-[70%] w-[95%] mx-auto flex flex-col gap-4 md:pt-4 pb-4 pt-[120px]">
+      <div className="md:w-[70%] w-[95%] min-h-[50vh] mx-auto flex flex-col gap-4 md:pt-4 pb-4 pt-[120px]">
         <h1 className="md:text-5xl text-3xl font-bold">
           {lenguage === "ru" ? "Найденные продукты" : "Found products"}
         </h1>

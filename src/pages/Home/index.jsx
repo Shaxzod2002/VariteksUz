@@ -76,72 +76,72 @@ export default function Home() {
         />
         <Link
           className="home-category-link absolute top-[33.7%] left-[50.7%]"
-          to={"/category-page/1/1"}
-          onClick={windowScrollTo}
-        ></Link>
-        <Link
-          className="home-category-link absolute top-[42%] left-[49.2%]"
-          to={"/category-page/2/1"}
-          onClick={windowScrollTo}
-        ></Link>
-        <Link
-          className="home-category-link absolute top-[40.6%] left-[54.2%]"
-          to={"/category-page/3/1"}
-          onClick={windowScrollTo}
-        ></Link>
-        <Link
-          className="home-category-link absolute top-[45.8%] left-[45.2%]"
-          to={"/category-page/4/1"}
-          onClick={windowScrollTo}
-        ></Link>
-        <Link
-          className="home-category-link absolute top-[54.7%] left-[34.3%]"
-          to={"/category-page/5/1"}
-          onClick={windowScrollTo}
-        ></Link>
-        <Link
-          className="home-category-link absolute top-[57.3%] left-[48.6%]"
-          to={"/category-page/6/1"}
-          onClick={windowScrollTo}
-        ></Link>
-        <Link
-          className="home-category-link absolute top-[59.8%] left-[53%]"
-          to={"/category-page/7/1"}
-          onClick={windowScrollTo}
-        ></Link>
-        <Link
-          className="home-category-link absolute top-[62.8%] left-[53%]"
-          to={"/category-page/8/1"}
-          onClick={windowScrollTo}
-        ></Link>
-        <Link
-          className="home-category-link absolute top-[69.5%] left-[49%]"
           to={"/category-page/9/1"}
           onClick={windowScrollTo}
         ></Link>
         <Link
+          className="home-category-link absolute top-[42%] left-[49.2%]"
+          to={"/category-page/1/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[40.6%] left-[54.2%]"
+          to={"/category-page/16/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[45.8%] left-[45.2%]"
+          to={"/category-page/18/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[54.7%] left-[34.3%]"
+          to={"/category-page/17/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[57.3%] left-[48.6%]"
+          to={"/category-page/15/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[59.8%] left-[53%]"
+          to={"/category-page/2/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[62.8%] left-[53%]"
+          to={"/category-page/23/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
+          className="home-category-link absolute top-[69.5%] left-[49%]"
+          to={"/category-page/123/1"}
+          onClick={windowScrollTo}
+        ></Link>
+        <Link
           className="home-category-link absolute top-[74.5%] left-[54.2%]"
-          to={"/category-page/10/1"}
+          to={"/category-page/3/1"}
           onClick={windowScrollTo}
         ></Link>
         <Link
           className="home-category-link absolute top-[78.2%] left-[47.5%]"
-          to={"/category-page/11/1"}
+          to={"/category-page/123/1"}
           onClick={windowScrollTo}
         ></Link>
         <Link
           className="home-category-link absolute top-[81.2%] left-[54%]"
-          to={"/category-page/12/1"}
+          to={"/category-page/33/1"}
           onClick={windowScrollTo}
         ></Link>
         <Link
           className="home-category-link absolute top-[87%] left-[45.4%]"
-          to={"/category-page/13/1"}
+          to={"/category-page/19/1"}
           onClick={windowScrollTo}
         ></Link>
         <Link
           className="home-category-link absolute top-[88.5%] left-[54.7%]"
-          to={"/category-page/14/1"}
+          to={"/category-page/18/1"}
           onClick={windowScrollTo}
         ></Link>
       </Box>

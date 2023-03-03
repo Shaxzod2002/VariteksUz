@@ -30,7 +30,7 @@ export default function Blog() {
   return (
     <div>
       <div className="blog-bg md:block hidden"></div>
-      <div className="md:pt-8 pb-4 md:pl-0 pl-3 pt-[120px] blog-header w-full md:w-[70%] min-h-0 mx-auto flex flex-col items-center md:items-start">
+      <div className="md:pt-8 pb-4 md:pl-0 pl-3 pt-[120px] blog-header w-full md:w-[70%] min-h-[50vh] mx-auto flex flex-col items-center md:items-start">
         <h1 className="md:text-4xl text-center font-bold">BLOG</h1>
         <div className="flex flex-col gap-4">
           <div className="flex gap-3">
