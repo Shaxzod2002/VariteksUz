@@ -27,6 +27,18 @@ export default function OrthopedicProducts() {
             alt="bg"
           />
           <Link
+            to={"/search"}
+            className="w-[300px] absolute top-10 left-1/2 bg-[#a20000] text-white p-3 -translate-x-1/2 rounded-lg text-center"
+            onClick={windowScrollTo}
+          >
+            {lenguage === "ru" ? "Поиск" : "Search"}
+          </Link>
+          <img
+            src={lenguage === "ru" ? categoryImageRus : categoryImageEng}
+            className="w-full"
+            alt="bg"
+          />
+          <Link
             className="home-category-link absolute top-[33.7%] left-[50.7%]"
             to={"/category-page/9/1"}
             onClick={windowScrollTo}
@@ -43,7 +55,7 @@ export default function OrthopedicProducts() {
           ></Link>
           <Link
             className="home-category-link absolute top-[45.8%] left-[45.2%]"
-            to={"/category-page/18/1"}
+            to={"/category-page/8/1"}
             onClick={windowScrollTo}
           ></Link>
           <Link
@@ -68,7 +80,7 @@ export default function OrthopedicProducts() {
           ></Link>
           <Link
             className="home-category-link absolute top-[69.5%] left-[49%]"
-            to={"/category-page/123/1"}
+            to={"/category/2"}
             onClick={windowScrollTo}
           ></Link>
           <Link
@@ -78,7 +90,7 @@ export default function OrthopedicProducts() {
           ></Link>
           <Link
             className="home-category-link absolute top-[78.2%] left-[47.5%]"
-            to={"/category-page/123/1"}
+            to={"/category/2"}
             onClick={windowScrollTo}
           ></Link>
           <Link

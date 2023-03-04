@@ -91,7 +91,7 @@ export default function Home() {
         ></Link>
         <Link
           className="home-category-link absolute top-[45.8%] left-[45.2%]"
-          to={"/category-page/18/1"}
+          to={"/category-page/8/1"}
           onClick={windowScrollTo}
         ></Link>
         <Link
@@ -116,7 +116,7 @@ export default function Home() {
         ></Link>
         <Link
           className="home-category-link absolute top-[69.5%] left-[49%]"
-          to={"/category-page/123/1"}
+          to={"/category/2"}
           onClick={windowScrollTo}
         ></Link>
         <Link
@@ -126,7 +126,7 @@ export default function Home() {
         ></Link>
         <Link
           className="home-category-link absolute top-[78.2%] left-[47.5%]"
-          to={"/category-page/123/1"}
+          to={"/category/2"}
           onClick={windowScrollTo}
         ></Link>
         <Link

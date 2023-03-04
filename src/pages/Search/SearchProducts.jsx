@@ -39,36 +39,45 @@ export default function SearchProduct() {
     <>
       <div className="product-category md:block hidden"></div>
       <div className="md:w-[70%] w-[95%] min-h-[50vh] mx-auto flex flex-col gap-4 md:pt-4 pb-4 pt-[120px]">
-        <h1 className="md:text-5xl text-3xl font-bold">
-          {lenguage === "ru" ? "Найденные продукты" : "Found products"}
-        </h1>
         <div className="w-full flex flex-wrap my-6 lg:justify-start justify-center items-center gap-8">
           {loading ? (
             <>
-              {curentProduct.map((product) => (
-                <Link
-                  key={product.product.id}
-                  to={`/product/${product.product.id}`}
-                  onClick={windowScrollTo}
-                  className="flex flex-col items-center justify-start gap-3 w-[200px] rounded-xl min-h-[400px]"
-                >
-                  <img
-                    src={`https://azamjon.pythonanywhere.com${product.image[0].image}`}
-                    className="w-full rounded-xl border-2 border-red-500"
-                    alt={product.image[0].id}
+              {searchProduct.length !== 0 ? (
+                <>
+                  {curentProduct.map((product) => (
+                    <Link
+                      key={product.product.id}
+                      to={`/product/${product.product.id}`}
+                      onClick={windowScrollTo}
+                      className="flex flex-col items-center justify-start gap-3 w-[200px] rounded-xl min-h-[400px]"
+                    >
+                      <img
+                        src={`https://azamjon.pythonanywhere.com${product.image[0].image}`}
+                        className="w-full rounded-xl border-2 border-red-500"
+                        alt={product.image[0].id}
+                      />
+                      <div className="flex flex-col text-center items-center justify-center">
+                        <h3 className="text-xl font-semibold">
+                          {product.product.name}
+                        </h3>
+                      </div>
+                    </Link>
+                  ))}
+                  <Pagination
+                    paginate={paginate}
+                    totalProduct={searchProduct.length}
+                    productPerPage={productPerPage}
                   />
-                  <div className="flex flex-col text-center items-center justify-center">
-                    <h3 className="text-xl font-semibold">
-                      {product.product.name}
-                    </h3>
-                  </div>
-                </Link>
-              ))}
-              <Pagination
-                paginate={paginate}
-                totalProduct={searchProduct.length}
-                productPerPage={productPerPage}
-              />
+                </>
+              ) : (
+                <div className="w-full min-h-[50vh] flex justify-center items-center">
+                  <h1 className="md:text-5xl text-3xl font-bold text-center text-red-500">
+                    {lenguage === "ru"
+                      ? "Найденные продукты"
+                      : "Found products"}
+                  </h1>
+                </div>
+              )}
             </>
           ) : (
             <Loading />

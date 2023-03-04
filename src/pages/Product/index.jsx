@@ -55,24 +55,25 @@ export default function Product() {
                   autoplay={true}
                   className="mySwiper swiperMain"
                 >
-                  {productItem["main-image"].map((item) => {
-                    return (
-                      <SwiperSlide key={item.id}>
-                        <img
-                          className="w-full"
-                          src={`https://azamjon.pythonanywhere.com${item.image}`}
-                          alt={item.id}
-                        />
-                        {!productItem.product.is_active && (
-                          <Box className="absolute top-0 left-0 w-full h-[510px] bg-black/70 flex justify-center items-center">
-                            <h1 className="bg-black w-full text-white text-center uppercase">
-                              The product is not available
-                            </h1>
-                          </Box>
-                        )}
-                      </SwiperSlide>
-                    );
-                  })}
+                  {productItem["main-image"] &&
+                    productItem["main-image"].map((item) => {
+                      return (
+                        <SwiperSlide key={item.id}>
+                          <img
+                            className="w-full"
+                            src={`https://azamjon.pythonanywhere.com${item.image}`}
+                            alt={item.id}
+                          />
+                          {!productItem.product.is_active && (
+                            <Box className="absolute top-0 left-0 w-full h-[510px] bg-black/70 flex justify-center items-center">
+                              <h1 className="bg-black w-full text-white text-center uppercase">
+                                The product is not available
+                              </h1>
+                            </Box>
+                          )}
+                        </SwiperSlide>
+                      );
+                    })}
                 </Swiper>
               </div>
               <div className="w-[400px] max-w-[90%] md:min-h-[450px] min-h-0 gap-4 flex flex-col justify-between">
@@ -88,7 +89,7 @@ export default function Product() {
                 <Socialmedia size={40} />
               </div>
             </div>
-            {productItem["features"].length !== 0 && (
+            {productItem["features"] && (
               <Box className="w-full py-4">
                 <h1 className="md:text-5xl text-3xl text-[#c53631] font-bold">
                   {lenguage === "ru"

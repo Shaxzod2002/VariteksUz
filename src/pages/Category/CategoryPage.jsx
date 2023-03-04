@@ -43,9 +43,9 @@ export default function CategoryPage() {
   return (
     <>
       <div className="product-category md:block hidden"></div>
-      {curentProduct.length > 0 ? (
+      {loading ? (
         <>
-          {loading ? (
+          {curentProduct.length > 0 ? (
             <div className="md:w-[70%] w-full md:pt-8 pt-[120px] mx-auto min-h-[50vh] py-5">
               <h1 className="md:text-4xl text-2xl font-bold md:text-left text-center">
                 {lenguage === "ru" ? "Брюшные Корсеты" : "Blory corsets"}
@@ -58,14 +58,16 @@ export default function CategoryPage() {
                     onClick={windowScrollTo}
                     className="flex flex-col items-center justify-start gap-3 w-[200px] rounded-xl min-h-[400px]"
                   >
-                    <img
-                      src={`https://azamjon.pythonanywhere.com${item.image[0].image}`}
-                      className="w-full rounded-xl border-2 border-red-500"
-                      alt={item.image[0].id}
-                    />
+                    {item.image[0] && (
+                      <img
+                        src={`https://azamjon.pythonanywhere.com${item.image[0].image}`}
+                        className="w-full rounded-xl border-2 border-red-500"
+                        alt={item.image[0].id}
+                      />
+                    )}
                     <div className="flex flex-col text-center items-center justify-center">
                       <h3 className="text-xl font-semibold">
-                        {item.product.name}
+                        {item.product && item.product.name}
                       </h3>
                     </div>
                   </Link>
@@ -78,15 +80,17 @@ export default function CategoryPage() {
               />
             </div>
           ) : (
-            <Loading />
+            <Box className="w-full flex justify-center min-h-[50vh]">
+              <h1 className="font-bold text-[#c53631]">
+                {lenguage === "ru"
+                  ? "Товары не найдены"
+                  : "No goods were found"}
+              </h1>
+            </Box>
           )}
         </>
       ) : (
-        <Box className="w-full flex justify-center min-h-[50vh]">
-          <h1 className="font-bold text-[#c53631]">
-            {lenguage === "ru" ? "Товары не найдены" : "No goods were found"}
-          </h1>
-        </Box>
+        <Loading />
       )}
     </>
   );
